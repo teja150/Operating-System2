@@ -63,7 +63,7 @@ void main()
             time = time + process_queue[largest].burst_time;
             process_queue[largest].ct = time;
             process_queue[largest].waiting_time = process_queue[largest].ct - process_queue[largest].arrival_time - process_queue[largest].burst_time;
-            process_queue[largest].turnaround_time = process_queue[largest].ct - process_queue[largest].arrival_time;
+            process_queue[largest].turnaround_time = process_queue[largest].ct - process_queue[largest].arrival_time;//completion time - arrival time
             process_queue[largest].status = 1;
             wait_time = wait_time + process_queue[largest].waiting_time;
             turnaround_time = turnaround_time + process_queue[largest].turnaround_time;
