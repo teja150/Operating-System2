@@ -34,6 +34,11 @@ void main()
       float wait_time = 0, turnaround_time = 0, average_waiting_time, average_turnaround_time;
       printf("\nEnter Total Number of Teachers:\t");
       scanf("%d", &limit);
+      if(limit>10)
+      {
+      	printf("exceeded maximum nuber of teachers");
+      	return 0;
+	  }
       for(i = 0, c = 'A'; i < limit; i++, c++)
       {
             process_queue[i].process_name = c;
